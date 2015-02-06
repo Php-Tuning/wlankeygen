@@ -3,4 +3,4 @@
 
 running at: http://www.webdesign-hoehne.de/tools/wlankeygen.php
 
-Kann im Intranet auf einem lokalem Webserver installiert werden, hierdurch kann die sicherere übertragung via https ermöglicht werden (empfohlen)
+Kann im Intranet auf einem lokalem Webserver installiert werden, hierdurch kann die sicherere Übertragung via https ermöglicht werden (empfohlen)
