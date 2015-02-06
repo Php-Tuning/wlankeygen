@@ -29,7 +29,7 @@ if (isset($_POST['submit']) && isset($_POST['anzahl'])){
     $_POST['anzahl'] = preg_replace('/([^0-9]*)/', '', $_POST['anzahl']);
     if ($_POST['anzahl'] >= 63){
         $_POST['anzahl'] = 63;
-    }elseif($_POST['anzahl'] <= 0){
+    }elseif($_POST['anzahl'] == '' || $_POST['anzahl'] <= 0){
         $_POST['anzahl'] = 10;
     }
     $_POST['anzahl'] = $_POST['anzahl'] -0;
