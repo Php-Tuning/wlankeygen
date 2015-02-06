@@ -25,12 +25,6 @@ function generateSymbols($num = 63){
     return $ret;
 }
 
-define('_title', 'Web Tools: WlanKeyGen - Der Wlan Schl&uuml;ssel Generator');
-define('_keywords', 'WlanKeyGen, Wlan Key Generator, complex Passwort generator');
-
-$ueberschrift = 'Web Tools: PWGen - Der Passwort Generator';
-$bild_rechts = '<img src="##baseurl##Bilder/07.jpg">';
-include('../includes/pw.func.php');
 if (isset($_POST['submit']) && isset($_POST['anzahl'])){
     $_POST['anzahl'] = preg_replace('/([^0-9]*)/', '', $_POST['anzahl']);
     if ($_POST['anzahl'] >= 63){
@@ -50,6 +44,7 @@ if (isset($_POST['submit']) && isset($_POST['anzahl'])){
     $content .= '<br /><br />';
 }else{
     $_POST['anzahl'] = 63;
+    $content = '';
 }
 
 
