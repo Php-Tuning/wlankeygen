@@ -1,4 +1,15 @@
 <?php
+if (version_compare(PHP_VERSION, '4.1.0', '<')) {
+    // $_POST Super Global abwärtskompabilität
+    if (isset($HTTP_POST_VARS['submit']) && isset($HTTP_POST_VARS['anzahl'])){
+        $_POST['submit'] = $HTTP_POST_VARS['submit'];
+        $_POST['anzahl'] = $HTTP_POST_VARS['anzahl'];
+    }
+}
+if (version_compare(PHP_VERSION, '4.2.0', '<')) {
+    // besserer Zufallsgenerator, wenn PHP Version kleiner 4.2
+    srand((double) microtime() * 1000000);
+}
 $symbols=array('!', '"', '#', '$', '%', '&', '\'', '(', ')', '*', '+', ',', '-', '.', '/', ':', 
 ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~');
 $buchst=array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
