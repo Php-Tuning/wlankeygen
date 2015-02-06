@@ -33,20 +33,14 @@ if (isset($_POST['submit']) && isset($_POST['anzahl'])){
         $_POST['anzahl'] = 10;
     }
     $_POST['anzahl'] = $_POST['anzahl'] -0;
-    if (is_int($_POST['anzahl'])){
-        $content = '<font color="green">Erfolg</font>:<br />
-        Ihr neuer, '.$_POST['anzahl'].'-stelliger Wlan Key wurde generiert:<br />'.
-        '<textarea style="width:100%;">'.generateSymbols($_POST['anzahl']).'</textarea>';
-    }else{
-        $content = '<font color="red">Fehler</font>:<br />
-        Die eingegebene Anzahl ist nicht numerisch.';
-    }
-    $content .= '<br /><br />';
+    $content = '<font color="green">Erfolg</font>:<br />'.
+    'Ihr neuer, '.$_POST['anzahl'].'-stelliger Wlan Key wurde generiert:<br />'.
+    '<textarea style="width:100%;">'.generateSymbols($_POST['anzahl']).'</textarea>'.
+    '<br /><br />';
 }else{
     $_POST['anzahl'] = 63;
     $content = '';
 }
-
 
 $content .= '
 <form method="post">
