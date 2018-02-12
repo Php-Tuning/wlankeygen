@@ -36,7 +36,7 @@ function generateSymbols($num = 63){
     return $ret;
 }
 
-if (isset($_POST['submit']) && isset($_POST['anzahl'])){
+if (isset($_POST['anzahl'])){
     $_POST['anzahl'] = preg_replace('/([^0-9]*)/', '', $_POST['anzahl']);
     if ($_POST['anzahl'] >= 63){
         $_POST['anzahl'] = 63;
